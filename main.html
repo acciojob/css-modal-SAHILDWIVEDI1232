@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Modal Example</title>
+  <link rel="stylesheet" href="styles.css">
 	<style>
-		.modal {
-  display: none; /* Hidden by default */
+		/* Hide modal by default */
+.modal {
+  display: none;
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
+  left: 0; top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.5);
 }
 
+/* Modal content box */
 .modal-content {
-  background-color: green;
+  background-color: white;
   margin: 15% auto;
   padding: 20px;
   width: 50%;
   border-radius: 5px;
-  position: relative;
 }
 
+/* Modal header */
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Close button */
 .close-modal {
   background: none;
   border: none;
@@ -39,30 +40,24 @@
   cursor: pointer;
 }
 
-		</style>
+	</style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<button id="openModal">Open Modal</button>
-	<div class="modal">
-		<div class="modal-content">
-   Modal Body Content
-			<div class="modal-header">
-				<h2>Modal Header</h2>
-				<button class="close-modal">&times;</button>
-			</div>
-			
-			<div class="model-body">
-				<p>Modal Body Content</p>
-			</div>
-			
+
+  <button id="openModal">Open Modal</button>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Modal Header</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Modal Body Content</p>
+      </div>
+    </div>
   </div>
-	</div>
-    <script type="text/javascript" src="./script.js">
-		
-</script>
 
+  <script src="script.js"></script>
 </body>
-
 </html>
